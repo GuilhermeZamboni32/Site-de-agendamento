@@ -17,9 +17,11 @@ function TelaPerfil() {
   const handleChange = (e) => setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
 
   return (
-    <div className="container">
-      <div className='topo'>
-        <div className='topo-esquerda'>
+    <div className='perfil-Body'>
+    <div className="perfil-container">
+
+      <div className='perfil-topo'>
+        <div className='perfiltopo-esquerda'>
           <img 
             src="macaco.png" 
             alt="Logo" 
@@ -28,20 +30,24 @@ function TelaPerfil() {
           />
         </div>
 
-        <div className='topo-meio'>
+        <div className='perfil-topo-meio'>
           {/** espaço vazio */}
         </div>
-        
-        <div className='topo-direita'>
+        <div className='perfil-topo-direita'>
+
           <button onClick={() => navigate('/login')}>Voltar</button>
         </div>
       </div>
+        
+      <div className='perfil-meio'>
+        <div className='perfil-meio-esquerda'>
 
-      <div className="info-box">
-        <div className="profile-section">
+           <div className="secao-perfil">
+          <div className='foto-perfil'>
           <img src="bolsonaro.png" alt="Usuário" className="big-image" />
+          </div>
 
-          <form className="user-info-form">
+          <form className="perfil-info-user">
             <input type="text" name="nome" value={userInfo.nome} onChange={handleChange} disabled={!isEditing} placeholder="Nome completo" />
             <input type="date" name="nascimento" value={userInfo.nascimento} onChange={handleChange} disabled={!isEditing} />
             <input type="text" name="cpf" value={userInfo.cpf} onChange={handleChange} disabled={!isEditing} placeholder="CPF" />
@@ -54,8 +60,13 @@ function TelaPerfil() {
           </button>
         </div>
 
+        </div>
+
+
+
+        <div className='perfil-meio-direita'>
         <div className="cards-section">
-          {[...Array(8)].map((_, index) => (
+          {[...Array(9)].map((_, index) => (
             <div key={index} className="info-item">
               <p>Nome:</p>
               <p>Profissão:</p>
@@ -63,7 +74,9 @@ function TelaPerfil() {
             </div>
           ))}
         </div>
+        </div>
       </div>
+    </div>
     </div>
   );
 }

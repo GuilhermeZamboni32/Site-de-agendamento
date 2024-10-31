@@ -1,96 +1,135 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #90e0ef; /* Cor de fundo */
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .topo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #03045e; /* Cor da parte superior */
-    padding: 30px;
-  }
-  
-  .header-icon {
-    cursor: pointer;
-    width: 50px; /* Ajuste o tamanho conforme necessário */
-  }
-  
-  .topo-direita {
-    margin-left: auto; /* Isso empurra o botão para a esquerda */
-    display: flex; /* Para garantir que os itens sejam exibidos corretamente */
-    align-items: center; /* Alinhar verticalmente o botão */
-  }
-  
-  .topo-direita button {
-    background-color: #0077b6; /* Cor do botão */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-right: 20px; /* Adiciona um espaço à direita do botão */
-  }
-  
-  .info-box {
-    background-color: #90e0ef; /* Cor do conteúdo */
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  .profile-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .big-image {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    border-radius: 50%;
-    margin-right: 20px;
-  }
-  
-  .user-info-form input {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    border: 1px solid #0077b6;
-    border-radius: 5px;
-    color: #000;
-  }
-  
-  .button {
-    background-color: #00b4d8; /* Cor do botão */
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .cards-section {
-    display: flex;
-    flex-wrap: wrap;
-    color: black;
-  }
-  
-  .info-item {
-    background-color: #08b731; /* Cor dos cartões */
-    border: 1px solid #0077b6;
-    padding: 10px; /* Reduzir o padding */
-    border-radius: 5px;
-    margin: 8px; /* Reduzir a margem */
-    flex: 1 0 20%; /* Ajuste a largura do cartão para 20% */
-  }
-  
+:root {
+  --cor1: #03045e;
+  --cor2: #0077b6;
+  --cor3: #00b4d8;
+  --cor4: #90e0ef;
+  --cor5: #caf0f8;
+}
+
+.perfil-Body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.perfil-container {
+  width: 100%;
+  padding: 0;
+  color: white;
+}
+
+.perfil-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cor1);
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-icon {
+  cursor: pointer;
+  width: 50px;
+}
+
+.perfil-topo-direita button {
+  background-color: var(--cor3);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.perfil-topo-direita button:hover {
+  background-color: var(--cor4);
+}
+
+.perfil-meio {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: var(--cor3);
+  box-sizing: border-box;
+}
+
+.perfil-meio-esquerda {
+  flex: 0 0 30%;
+}
+
+.perfil-meio-direita {
+  flex: 0 0 60%;
+}
+
+.secao-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:var(--cor2);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.foto-perfil img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.perfil-info-user input {
+  display: block;
+  margin: 10px 0;
+  padding: 12px;
+  width: 90%;
+  border: 0px solid #000000;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.button {
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #1553c7;
+}
+
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: var(--cor2);
+  margin-top: 20px;
+}
+
+.info-item {
+  border: 1px solid #000000;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 8px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color:#90e0ef;
+}
+
+.info-item p {
+  margin: 5px 0;
+  background-color: #00b4d8;
+}
