@@ -11,7 +11,7 @@ function TelaInicial() {
       <div className='container'>
         <div className='topo'>
           <div className='topo-esquerda' onClick={() => navigate('/')}>
-            <img src='macaco.png' alt="Logo" className="logo" />
+            <img src='logo-agenda.png' alt="Logo" className="logo" />
           </div>
 
           <div className='topo-meio'>

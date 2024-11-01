@@ -23,7 +23,7 @@ function TelaPerfil() {
       <div className='perfil-topo'>
         <div className='perfiltopo-esquerda'>
           <img 
-            src="macaco.png" 
+            src="logo-agenda.png" 
             alt="Logo" 
             className="header-icon" 
             onClick={() => window.location.href = "/"} 
@@ -44,7 +44,7 @@ function TelaPerfil() {
 
            <div className="secao-perfil">
           <div className='foto-perfil'>
-          <img src="bolsonaro.png" alt="Usuário" className="big-image" />
+          <img src="icone-perfil.png" alt="Usuário" className="big-image" />
           </div>
 
           <form className="perfil-info-user">

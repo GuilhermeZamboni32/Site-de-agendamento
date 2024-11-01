@@ -97,22 +97,30 @@ body {
 
 .quadro {
   text-align: center;
-  background-color: var(--cor2); /* Usando a cor 2 como fundo dos quadros */
+  background-color: var(--cor2); /* Fundo dos quadros */
   padding: 15px;
   border-radius: 8px;
-  
   width: 30%; 
   min-width: 150px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .quadro h3 {
+  font-size: 22px;
+  color: var(--cor3); /* Cor do título do quadro */
   margin-bottom: 10px;
-  color: white; 
+  font-weight: bold;
 }
 
 .quadro p {
-  color: var(--cor4); /* Usando a cor 4 para o texto */
-  font-size: 14px;
+  font-size: 15px;
+  color: var(--cor6); /* Cor do texto do quadro */
+  line-height: 1.4;
+}
+
+.quadro:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .topo-direita {
@@ -131,4 +139,223 @@ body {
 
 .botao:hover {
   background-color: var(--cor2); /* Usando a cor 1 para hover do botão */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================               Cadastro                  ============================*/
+
+
+body, .cadastro-TelaCadastro {
+  background-color: var(--cor4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.cadastro-topo {
+  width: 100%;
+    background: linear-gradient(135deg, #0077B6, #0096C7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cadastro-topo-esquerda .cadastro-logo {
+  width: 50px;
+  cursor: pointer;
+}
+
+.cadastro-topo-meio h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.cadastro-meio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.cadastro-CadastroContainer {
+  background-color: var(--cor2);
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #000;
+}
+
+.cadastro-CadastroContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cadastro-CadastroContainer input {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--cor3);
+  color: var(--corTexto);
+  font-size: 16px;
+}
+
+.cadastro-botaoCadastro, .cadastro-botaoVoltar {
+  padding: 10px;
+  background-color: var(--cor3);
+  color: var(--corTexto);
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cadastro-botaoCadastro:hover, .cadastro-botaoVoltar:hover {
+  background-color: var(--cor1);
+}
+
+.cadastro-baixo {
+  width: 100%;
+  background-color: var(--cor2);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--corTexto);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================               Login                  ============================*/
+
+
+
+:root {
+  --cor1: #03045e; /* Azul escuro */
+  --cor2: #0077b6; /* Azul médio */
+  --cor3: #00b4d8; /* Azul claro */
+  --cor4: #90e0ef; /* Azul muito claro */
+  --cor5: #caf0f8; /* Azul pálido */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor5); /* Fundo azul pálido */
+}
+
+.login-Telalogin {
+  max-width: 400px;
+  margin: 50px auto; /* Centraliza o container */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white; /* Fundo branco para o formulário */
+}
+
+.logino-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logino-logo {
+  width: 50px; /* Ajuste o tamanho da logo */
+  cursor: pointer;
+}
+
+.login-topo-meio h2 {
+  color: var(--cor1); /* Azul escuro */
+  font-size: 1.5em;
+}
+
+.login-meio {
+  margin-bottom: 20px;
+}
+
+.login-CadastroContainer form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-CadastroContainer input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--cor3); /* Azul claro */
+  border-radius: 5px;
+}
+
+.login-CadastroContainer input:focus {
+  border-color: var(--cor2); /* Azul médio */
+  outline: none; /* Remove o contorno padrão */
+}
+
+.login-botaoCadastro {
+  padding: 10px;
+  background-color: var(--cor2); /* Azul médio */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-botaoCadastro:hover {
+  background-color: var(--cor1); /* Azul escuro */
+}
+
+.login-botaoVoltar {
+  padding: 10px;
+  background-color: transparent;
+  color: var(--cor1); /* Azul escuro */
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-baixo {
+  text-align: center; /* Centraliza o texto */
+}
+
+.linklogin {
+  color: var(--cor2); /* Azul médio */
+  cursor: pointer;
+}
+
+.linklogin:hover {
+  text-decoration: underline; /* Sublinha ao passar o mouse */
 }
