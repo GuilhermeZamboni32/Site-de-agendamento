@@ -91,7 +91,7 @@ function Cadastro() {
             
 
           <div className="cadastro-baixo">
-            <h2>div baixo</h2>
+            {/**espaço em branco */}
           </div>
           </div>
     </div>

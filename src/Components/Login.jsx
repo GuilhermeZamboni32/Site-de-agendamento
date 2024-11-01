@@ -58,7 +58,7 @@ function Login() {
           </div>
 
           <div className="login-baixo">
-            <h2>div baixo</h2>
+            {/**espaço em branco */}
         </div>
         </div>
     </div>

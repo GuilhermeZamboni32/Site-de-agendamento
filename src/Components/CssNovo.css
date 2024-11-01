@@ -5,14 +5,14 @@
   --cor4: #90e0ef; 
   --cor5: #caf0f8; 
 
-  /*outra paleta de coras
-  --cor6: #ffddadff;
-  --cor7: #ebe270ff;
-  --cor8: #9ea960ff;
-  --cor9: #5c301eff;
-  --cor10: #de7d8fff;
-  */
 }
+/*outra paleta de coras
+--cor6: #ffddadff;
+--cor7: #ebe270ff;
+--cor8: #9ea960ff;
+--cor9: #5c301eff;
+--cor10: #de7d8fff;
+*/
 
 
 
@@ -164,87 +164,155 @@
 
 /*==============================               Cadastro                  ============================*/
 
-
-
-
-
-
-.cadastro-body{
-  background-color: #03045e;
-  width: 1366px;
-  height: 641px;
-  margin: 0;
+:root {
+  --cor1: #03045e; 
+  --cor2: #0077b6; 
+  --cor3: #00b4d8; 
+  --cor4: #90e0ef; 
+  --cor5: #caf0f8; 
+  --corBotao: #007bff;
+  --corBotaoHover: #0056b3;
 }
 
+  .cadastro-body {
+    background-color: var(--cor2);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .cadastro-container{
-      background-color: blueviolet;
+    .cadastro-container {
+      background-color: var(--cor2);
       width: 100%;
-      height: 641px;
-      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
     }
 
+      .cadastro-topo {
+        background-color: var(--cor1);
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+      }
 
-        .cadastro-topo{
-          background-color: chocolate;
-          display: flex;
-          width: 100%;
-        }
+          .cadastro-topo-esquerda {
+            display: flex;
+            align-items: center;
+          }
 
-              .cadastro-topo-esquerda{
-                background-color: chartreuse;
-                width: 23%;
-              }
-                    .imagem .logo{
-                      width: 50px;
-                      cursor: pointer;
-                    }
-
-              .cadastro-topo-meio{
-              background-color: brown;
-              flex-direction: column;
-              width: 50%;
-              }
-
-              .cadastro-topo-direita{
-                background-color: darkgreen;
-                width: 33%;
-              }
-
-
-        .cadastro-meio{
-          background-color: gold;
-          width: 100%;
-          height: 400px;
-          display:flex;
-          flex-direction: center;
+          .cadastro-topo-esquerda {
+            width: 10%;
+          }
           
-        }
-              .cadastro-info{
-                background-color: cornflowerblue;
-                display:flex;
+          .imagem .logo {
+            width: 40px;
+            cursor: pointer;
+          }
+          
+          .cadastro-topo-meio {
+            flex-grow: 1;
+            text-align: center;
+            color: var(--cor5);
+            font-size: 1.5em;
+            font-weight: bold;
+          }
+
+          .cadastro-topo-meio{
+            display: flex;
+            align-items: center;
+          }
+
+          .cadastro-topo-direita {
+            width: 10%;
+            justify-content: flex-end;
+          }
+
+          .cadastro-topo-direita{
+            display: flex;
+            align-items: center;
+          }
+          
+      .cadastro-meio {
+        background-color: var(--cor2);
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+      
+          .cadastro-info {
+            background-color: var(--cor3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+          }
+
+              .cadastro-form {
+                background-color: var(--cor5);
+                display: flex;
                 flex-direction: column;
-                height: 300px;
-                width: 1000px;
-                line-height: 20px;
+                align-items: center;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 400px;
               }
-                    .cadastro-form{
-                      background-color: darkmagenta;
-                      display:flex;
-                      flex-direction: column;
-                      height: 300px;
-                      width: 1000px;
-                      line-height: 20px;
-                    }
 
+                  .cadastro-form input {
+                    width: 100%;
+                    padding: 12px;
+                    margin-bottom: 15px;
+                    border: 1px solid var(--cor1);
+                    border-radius: 5px;
+                    font-size: 16px;
+                  }
 
-        .cadastro-baixo{
-          background-color: gray;
-          width: 100%;
-          height: 145px;
-        }
+                  .cadastro-form input:focus {
+                    border-color: var(--corBotao);
+                    outline: none;
+                  }
 
+                  .cadastro-botaoCadastro {
+                    background-color: var(--corBotao);
+                    color: var(--cor5);
+                    padding: 12px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                    width: 100%;
+                    transition: background-color 0.3s;
+                    font-weight: bold;
+                  }
 
+                  .cadastro-botaoCadastro:hover {
+                    background-color: var(--corBotaoHover);
+                  }
+
+          .cadastro-baixo {
+        background-color: var(--cor2);
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        color: white;
+        font-size: 1.2em;
+        padding-top: 30px;
+      }
 
 
 
@@ -253,90 +321,155 @@
 
 
 
-
-
-
-.login-body{
-  background-color: blueviolet;
-  width: 1366px;
-  height: 641px;
-  margin: 0;
+:root {
+  --cor1: #03045e; 
+  --cor2: #0077b6; 
+  --cor3: #00b4d8; 
+  --cor4: #90e0ef; 
+  --cor5: #caf0f8; 
+  --corBotao: #007bff;
+  --corBotaoHover: #0056b3;
 }
 
+.login-body {
+  background-color: var(--cor2);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.login-container {
+  background-color: var(--cor2);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 60px; /* Compensação para o topo fixo */
+  margin-bottom: 60px; /* Compensação para o rodapé fixo */
+}
 
-    .login-container{
-      background-color: rgb(89, 42, 165);
-      width: 100%;
-      height: 641px;
-      margin: 0;
-    }
+.login-topo {
+  background-color: var(--cor1);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
 
+.login-topo-esquerda, .login-topo-meio, .login-topo-direita {
+  display: flex;
+  align-items: center;
+}
 
+.login-topo-esquerda {
+  width: 10%;
+}
 
-    .login-topo{
-      background-color: rgb(17, 228, 228);
-      display: flex;
-      width: 100%;
-    }
+.imagem .logo {
+  width: 40px;
+  cursor: pointer;
+}
 
-        .login-topo-esquerda{
-          background-color: #147fb1;
-          width: 23%;
-        }
-            .imagem .logo{
-              width: 50px;
-              cursor: pointer;
-            }
+.login-topo-meio {
+  flex-grow: 1;
+  text-align: center;
+  color: var(--cor5);
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
-        .login-topo-meio{
-          background-color: rgb(61, 163, 66);
-          width: 60%;
-        }
+.login-topo-direita {
+  width: 10%;
+  justify-content: flex-end;
+}
 
-        .login-topo-direita{
-          background-color: rgb(228, 17, 228);
-          width: 33%;
-        }
+.login-meio {
+  background-color: var(--cor2);
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: calc(100vh - 120px); /* Ajuste a altura com base no topo e rodapé */
+}
 
+.login-info {
+  background-color: var(--cor3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
 
+.login-form {
+  background-color: var(--cor5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
 
-    .login-meio{
-      background-color: darkgreen;
-      width: 100%;
-      height: 400px;
-      display:flex;
-      flex-direction: center;
-    }
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--cor1);
+  border-radius: 5px;
+  font-size: 16px;
+}
 
-        .login-info{
-          background-color: darkorange;
-          display:flex;
-          flex-direction: column;
-          height: 300px;
-          width: 1000px;
-          line-height: 20px;
-        }   
+.login-form input:focus {
+  border-color: var(--corBotao);
+  outline: none;
+}
 
-            .login-form{
-              background-color: #00b4d8;
-              display:flex;
-              flex-direction: column;
-              height: 300px;
-              width: 1000px;
-              line-height: 20px;
-            }
+.login-botaoLogin {
+  background-color: var(--corBotao);
+  color: var(--cor5);
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
 
+.login-botaoLogin:hover {
+  background-color: var(--corBotaoHover);
+}
 
-
-    .login-baixo{
-      background-color: darkred;
-      width: 100%;
-      height: 145px;
-    }
-
-
-
+.login-baixo {
+  background-color: var(--cor2);
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  padding-top: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
 
 
 
