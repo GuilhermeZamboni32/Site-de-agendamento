@@ -21,50 +21,46 @@ function Login() {
   };
 
   return (
-    <div className="login-Telalogin">
-      <div className="logino-topo">
-        <div className="login-topo-esquerda">
-          <img
-            src="logo-agenda.png" // Substitua pelo caminho da sua imagem
-            alt="Logo"
-            className="logino-logo"
-            onClick={() => navigate('/')} // Navega para a tela inicial ao clicar na logo
-          />
-        </div>
-        <div className="login-topo-meio">
-          <h2>Login de Usuário</h2>
-        </div>
-        <div className="login-topo-direita">
-          {/* Adicione aqui qualquer conteúdo para a parte direita do topo, se necessário */}
-        </div>
-      </div>
+    <div className="login-body">
+        <div className='login-container'>
+              <div className="login-topo">
 
-      <div className="login-meio">
-        <div className="login-CadastroContainer">
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="CPF"
-              required
-            />
-            <input
-              type="password"
-              placeholder="Senha"
-              required
-            />
-            <button type="submit" className="login-botaoCadastro">Login</button>
-          </form>
-          <button className="login-botaoVoltar" onClick={handleBack}>Voltar</button>
-        </div>
-      </div>
+                <div className="login-topo-esquerda">
+                  <div className='imagem'>
+                  <img src="logo-agenda.png" alt="Logo" className="logo" onClick={() => navigate('/')} />
+                  </div>
+                </div>
+                <div className="login-topo-meio">
+                  <h2>Login de Usuário</h2>
+                </div>
+                <div className="login-topo-direita">
+                <button className="login-botaoVoltar" onClick={handleBack}>Voltar</button>
+                </div>
+              </div>
 
-      <div className="login-baixo">
-        <div className="linkloginContainer">
-          <p className="linklogin" onClick={handleCadastroRedirect}>
-            Não tem conta ainda? Cadastre-se
-          </p>
+          <div className="login-meio">
+                <div className="login-info">
+                      <form className='login-form' onSubmit={handleSubmit}>
+                        <input
+                          type="text"
+                          placeholder="CPF"
+                          required
+                        />
+                        <input
+                          type="password"
+                          placeholder="Senha"
+                          required
+                        />
+                        <button type="submit" className="login-botaoCadastro">Login</button>
+                      </form>
+                     
+                </div>
+          </div>
+
+          <div className="login-baixo">
+            <h2>div baixo</h2>
         </div>
-      </div>
+        </div>
     </div>
   );
 }

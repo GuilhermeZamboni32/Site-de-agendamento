@@ -31,15 +31,25 @@ function TelaInicial() {
         <div className='baixo'>
           <div className='quadro'>
             <h3>Filosofia</h3>
-            <p>Texto sobre filosofia.</p>
-          </div>
-          <div className='quadro'>
-            <h3>História</h3>
-            <p>Texto sobre história.</p>
+            <p>Facilitar o acesso e a organização de serviços através de uma plataforma intuitiva,
+              promovendo a conveniência para usuários e prestadores de serviço. Acreditamos 
+              na importância de simplificar o processo de agendamento, colocando o usuário no centro de 
+              nossas decisões.</p>
           </div>
           <div className='quadro'>
             <h3>Objetivos</h3>
-            <p>Texto sobre objetivos.</p>
+            <p>Oferecer uma experiência de agendamento sem complicações, melhorando a comunicação entre 
+              clientes e profissionais; reduzir o tempo de espera e minimizar conflitos de horários; 
+              e implementar notificações automáticas para lembrar os clientes dos compromissos agendados.</p>
+          </div>
+          <div className='quadro'>
+            <h3>História</h3>
+            <p>Criado para atender a uma demanda crescente por soluções digitais, o site de agendamentos 
+              surgiu com o propósito de otimizar o gerenciamento de compromissos. Ao longo do tempo, 
+              evoluiu para integrar funcionalidades como notificações, perfis de usuários e uma interface 
+              mais amigável, tornando-se uma ferramenta essencial para diversos setores.</p>
+
+
           </div>
         </div>
       </div>
