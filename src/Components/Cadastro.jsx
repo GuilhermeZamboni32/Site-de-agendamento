@@ -50,7 +50,7 @@ function Cadastro() {
                   </div>
 
                   <div className="cadastro-topo-direita">
-                  <button onClick={() => navigate('/')} className="cadastro-botaoVoltar">Voltar</button>
+                  <button onClick={() => navigate('/')} className="cadastro-botao-voltar">Voltar</button>
                   </div>
                 </div>
 
@@ -58,32 +58,32 @@ function Cadastro() {
           <div className="cadastro-meio">
                   <div className='cadastro-info'>
                     <form className='cadastro-form' onSubmit={handleSubmit}>
-                      <input
+                      <input className='input'
                         type="text"placeholder="Nome Completo" value={nomeCompleto} 
                         onChange={(e) => setNomeCompleto(e.target.value)} required
                       />
-                      <input
+                      <input className='input'
                         type="date" placeholder="Data de Nascimento"value={dataNascimento}
                         onChange={(e) => setDataNascimento(e.target.value)} required
                       />
-                      <input
+                      <input className='input'
                         type="text" placeholder="CPF" value={cpf}
                         onChange={(e) => setCpf(e.target.value)} required
                       />
-                      <input
+                      <input className='input'
                         type="text" placeholder="Endereço" value={endereco}
                         onChange={(e) => setEndereco(e.target.value)} required
                       />
-                      <input
+                      <input className='input'
                         type="password" placeholder="Senha" value={senha}
                         onChange={(e) => setSenha(e.target.value)} required
                       />
-                      <input
+                      <input className='input'
                         type="password" placeholder="Confirmar Senha" value={confirmarSenha}
                         onChange={(e) => setConfirmarSenha(e.target.value)} required
                       />
 
-                      <button type="submit" className="cadastro-botaoCadastro">Cadastrar</button>
+                      <button type="submit" className="cadastro-botao-cadastro">Cadastrar</button>
                     </form>
                     
                   </div>

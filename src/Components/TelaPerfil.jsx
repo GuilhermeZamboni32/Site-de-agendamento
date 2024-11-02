@@ -35,7 +35,7 @@ function TelaPerfil() {
         </div>
         <div className='perfil-topo-direita'>
 
-          <button onClick={() => navigate('/login')}>Voltar</button>
+          <button className='perfil-botao-login' onClick={() => navigate('/login')}>Voltar</button>
         </div>
       </div>
         
@@ -48,11 +48,11 @@ function TelaPerfil() {
           </div>
 
           <form className="perfil-info-user">
-            <input type="text" name="nome" value={userInfo.nome} onChange={handleChange} disabled={!isEditing} placeholder="Nome completo" />
-            <input type="date" name="nascimento" value={userInfo.nascimento} onChange={handleChange} disabled={!isEditing} />
-            <input type="text" name="cpf" value={userInfo.cpf} onChange={handleChange} disabled={!isEditing} placeholder="CPF" />
-            <input type="text" name="endereco" value={userInfo.endereco} onChange={handleChange} disabled={!isEditing} placeholder="Endereço" />
-            <input type="password" name="senha" value={userInfo.senha} onChange={handleChange} disabled={!isEditing} placeholder="Senha" />
+            <input className='input' type="text" name="nome" value={userInfo.nome} onChange={handleChange} disabled={!isEditing} placeholder="Nome completo" />
+            <input className='input' type="date" name="nascimento" value={userInfo.nascimento} onChange={handleChange} disabled={!isEditing} />
+            <input className='input' type="text" name="cpf" value={userInfo.cpf} onChange={handleChange} disabled={!isEditing} placeholder="CPF" />
+            <input className='input' type="text" name="endereco" value={userInfo.endereco} onChange={handleChange} disabled={!isEditing} placeholder="Endereço" />
+            <input className='input' type="password" name="senha" value={userInfo.senha} onChange={handleChange} disabled={!isEditing} placeholder="Senha" />
           </form>
 
           <button className="button" onClick={handleEdit}>

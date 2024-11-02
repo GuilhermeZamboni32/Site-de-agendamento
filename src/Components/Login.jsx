@@ -34,24 +34,24 @@ function Login() {
                   <h2>Login de Usuário</h2>
                 </div>
                 <div className="login-topo-direita">
-                <button className="login-botaoVoltar" onClick={handleBack}>Voltar</button>
+                <button className="login-botao-voltar" onClick={handleBack}>Voltar</button>
                 </div>
               </div>
 
           <div className="login-meio">
                 <div className="login-info">
                       <form className='login-form' onSubmit={handleSubmit}>
-                        <input
+                        <input className='input'
                           type="text"
                           placeholder="CPF"
                           required
                         />
-                        <input
+                        <input className='input'
                           type="password"
                           placeholder="Senha"
                           required
                         />
-                        <button type="submit" className="login-botaoCadastro">Login</button>
+                        <button type="submit" className="login-botao-login">Login</button>
                       </form>
                      
                 </div>
