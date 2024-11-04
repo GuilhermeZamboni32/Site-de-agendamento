@@ -124,6 +124,20 @@
         margin-top: 20px;
       }
 
+
+          .grupo-input{
+            background-color: var(--cor2);
+            padding: 15px;
+            width: 100%;
+          }
+
+          .input-pesquisa{
+            background-color: var(--cor4);
+            border-radius: 7px;
+            border: 2px solid var(--cor1);
+            color: var(--cor1);
+          }
+
       .info-item {
         border: 1px solid #000000;
         padding: 15px;
