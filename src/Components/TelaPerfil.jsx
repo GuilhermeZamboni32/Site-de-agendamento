@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './TelaPerfil.css';
+import BarraPesquisa from './BarraPesquisa';
 
 function TelaPerfil() {
   const navigate = useNavigate();
@@ -66,30 +67,7 @@ function TelaPerfil() {
 
         <div className='perfil-meio-direita'>
         <div className="cards-section">
-
-
-        <div class="grupo-input">
-          <center>
-
-            <div class="icone-input">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-
-            <input className='input-pesquisa' id="search" type="text" class="input-field" placeholder="Pesquisar" />
-
-          </center>
-        </div>
-        
-
-
-          {[...Array(6)].map((_, index) => (
-            <div key={index} className="info-item">
-              <p>Nome:</p>
-              <p>Profissão:</p>
-              <p>Endereço:</p>
-              <button className="button">Ver/Editar</button>
-            </div>
-          ))}
+          <BarraPesquisa />
         </div>
         </div>
       </div>
