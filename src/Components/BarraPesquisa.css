@@ -50,13 +50,24 @@ body {
     background-color: var(--cor1);
     color: var(--cor5);
 }
-
+/*
 .input-pesquisa {
     width: 100%;
     border: none;
     background-color: var(--cor4);
     color: var(--cor1);
     outline: none;
+}*/
+
+.input-pesquisa {
+    width: 100%;
+    height: 48px; /* Aumenta a altura do campo de pesquisa */
+    padding: 0 16px; /* Ajusta o padding para mais espaço interno */
+    border: none;
+    background-color: var(--cor4);
+    color: var(--cor1);
+    outline: none;
+    font-size: 16px; /* Aumenta o tamanho da fonte para melhor legibilidade */
 }
 
 .items {

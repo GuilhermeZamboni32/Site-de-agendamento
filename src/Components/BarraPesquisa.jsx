@@ -1,48 +1,23 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BarraPesquisa.css';
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaMagnifyingGlass } from 'react-icons/fa6';
 
 function BarraPesquisa() {
   const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
+
   const items = [
-    {
-      title: 'barbeiro',
-      image: 'barbeiro.jpg',
-      description: `Nome: João\nIdade: 38 Anos`
-    },
-    {
-      title: 'enfermeira',
-      image: 'enfermeira.jpg',
-      description: `Nome: Maria\nIdade: 27 Anos`
-    },
-    {
-      title: 'reporter',
-      image: 'reporter.jpg',
-      description: `Nome: Fabio\nIdade: 30 Anos`
-    },
-    {
-      title: 'manicure',
-      image: 'manicure.webp',
-      description: `Nome: Amanda\nIdade: 29 Anos`
-    },
-    {
-      title: 'medico',
-      image: 'medico.jpeg',
-      description: `Nome: Gustavo\nIdade: 36 Anos`
-    },
-    {
-      title: 'professor',
-      image: 'professor.png',
-      description: `Nome: Thiago\nIdade: 42 Anos`
-    }
+    { title: 'barbeiro', image: 'barbeiro.jpg', description: `Nome: João\nIdade: 38 Anos` },
+    { title: 'enfermeira', image: 'enfermeira.jpg', description: `Nome: Maria\nIdade: 27 Anos` },
+    { title: 'reporter', image: 'reporter.jpg', description: `Nome: Fabio\nIdade: 30 Anos` },
+    { title: 'manicure', image: 'manicure.webp', description: `Nome: Amanda\nIdade: 29 Anos` },
+    { title: 'medico', image: 'medico.jpeg', description: `Nome: Gustavo\nIdade: 36 Anos` },
+    { title: 'professor', image: 'professor.png', description: `Nome: Thiago\nIdade: 42 Anos` }
   ];
 
   const formatString = (value) => {
-    return value
-      .trim()
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
+    return value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   };
 
   const filteredItems = items.filter((item) => {
@@ -56,8 +31,7 @@ function BarraPesquisa() {
   });
 
   const handleViewClick = (item) => {
-    alert(`Ver detalhes de ${item.title}`);
-    // Aqui você pode definir a lógica para exibir mais informações ou redirecionar
+    navigate(`/perfil/${item.title}`); // Redireciona para a rota de perfil com o título do item
   };
 
   return (
@@ -86,7 +60,7 @@ function BarraPesquisa() {
               <div className="item-content">
                 <h2 className="item-title">{item.title}</h2>
                 <p className="item-description">{item.description}</p>
-                <button className="view-button" onClick={() => handleViewClick(item)}>
+                <button className="view-button">
                   Ver
                 </button>
               </div>

@@ -160,7 +160,7 @@
 
 .perfil-baixo {
   width: 100vw;
-  background-color: var(--cor1);
-  padding: 20px;
+  background-color: var(--cor2);
+  padding: 4%;
   box-sizing: border-box;
 }
